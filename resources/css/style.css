@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 22px;
+    background-color: black;
+    color: seashell;
+    opacity: 0.9;
+}
+
+header {
+    justify-content: space-between;
+    padding: 0 10px;
+    height: 69px;
+    display: flex;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid seashell;
+    top: 0;
+}
+
+header img {
+    height: 50px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    height: 100%;
+}
+
+header ul li {
+    align-items: center;
+    display: flex;
+}
+
+header ul li a {
+    color: seashell;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-mission {
+    display: flex;
+    flex-direction: column;
+    margin-top: 69px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-image: url("/resources/images/img-mission-background.jpg");
+    background-size: cover;
+    height: 700px;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    gap: 10px;
+    width: 100%;
+}
+
+#featured-tea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin-top: 60px;
+    justify-content: center;
+}
+
+.featured-teas {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.tea img {
+    width: 300px;
+    height: 200px;
+}
+
+#locations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.locations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/resources/images/img-locations-background.jpg");
+    background-size: cover;
+    height: 500px;
+    gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+}
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.location {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-shink: 1;
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 3;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    padding: 40px 20px;
+    align-items: center;
+    justify-content: flex-start;
+}
