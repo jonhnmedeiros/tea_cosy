@@ -12,38 +12,55 @@ body {
     opacity: 0.9;
 }
 
-header {
-    justify-content: space-between;
-    padding: 0 10px;
-    height: 69px;
-    display: flex;
-    position: fixed;
+.header-section {
     background-color: black;
     width: 100%;
-    align-items: center;
-    border-bottom: 1px solid seashell;
-    top: 0;
-}
+    position: fixed;
+    z-index: 1000;
+  }
 
-header img {
+#logo {
     height: 50px;
+    margin-left: 10px;
+    width: auto;
 }
 
 header ul {
     display: flex;
     list-style: none;
-    gap: 20px;
-    height: 100%;
 }
 
 header ul li {
-    align-items: center;
-    display: flex;
+    margin-right: 20px;
+    text-decoration: underline;
 }
 
-header ul li a {
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid seashell;
+    height: 69px;
+    width: 100%;
+  }
+  
+  .nav-bar a {
     color: seashell;
-}
+  }
+  
+  .nav-bar a:link,
+  .nav-bar a:visited {
+    color: seashell;
+  }
+  
+  .nav-bar a:hover {
+    color: gray;
+  }
+  
+  .nav-bar a:active {
+    color: red;
+    text-decoration: none;
+  }
 
 .main {
     display: flex;
@@ -116,59 +133,109 @@ header ul li a {
     height: 200px;
 }
 
-#locations {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
-    width: 100%;
-    padding: 0 20px;
-}
 
-.locations {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#store-locations-container {
     background-size: cover;
-    height: 500px;
-    gap: 15px;
-    width: 100%;
-    max-width: 1200px;
-}
-.cards {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    justify-content: center;
+    width: 1200px;
+    max-width: 93%;
+    min-height: 500px;
+    margin: 50px auto auto;
     align-items: center;
-    width: 100%;
-}
+    align-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-position: 0 50px;
+    background-repeat: no-repeat;
+    padding-top: 90px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+
+.location-container {
+    padding-bottom: 100px;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
 .location {
-    width: 300px;
     height: 300px;
-    opacity: 1;
+    width: 300px;
+    display: flex;
     background-color: black;
-    justify-content: space-around;
     align-items: center;
-    display: flex;
+    justify-content: center;
+    margin: 20px;
     flex-direction: column;
-    flex-shink: 1;
-    text-align: center;
+    opacity: 0.9;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 20px;
+  }
+
+.copyright {
+    padding-top: 40px;
+    text-align: left;
+    margin: 20px;
 }
 
-.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 3;
-}
-
-footer {
-    display: flex;
-    width: 100%;
-    padding: 40px 20px;
-    align-items: center;
-    justify-content: flex-start;
-}
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex; /* Show on mobile */
+        align-items: center; /* Center alignment if there are any other elements within */
+    }
+  
+  
+    ul {
+        flex-direction: column;
+        width: 100%; /* Take full width to accommodate longer text */
+    }
+  
+    li {
+        width: 100%; /* Full width to prevent overflow */
+        text-align: center; /* Center align the text */
+        margin-right: 0; /* Remove right margin */
+        padding: 10px 0; /* Add padding for touch accessibility */
+    }
+  
+    .nav-bar a {
+        padding: 10px; /* Larger area to improve touch interaction */
+    }
+  }
+  
+  /* Hamburger Menu Styling */
+  .hamburger-menu {
+    display: none; /* Only display this in mobile view */
+    cursor: pointer;
+    font-size: 30px;
+    padding-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger-menu {
+        display: block; /* Show hamburger icon */
+        margin-left: auto;
+    }
+  
+    .nav-bar ul {
+        display: none; /* Hide menu initially */
+        width: 100%; /* Full width */
+        flex-direction: column;
+        position: absolute;
+        background-color: black; /* Match nav-bar background */
+        top: 69px; /* Position below the nav-bar */
+        left: 0;
+        z-index: 1001;
+    }
+  
+    #logo {
+      margin-right: auto;
+       /* Ensures the logo stays on the left */
+  }
+  
+    .nav-bar.active ul {
+        display: flex; /* Show menu when active */
+    }
+  }
